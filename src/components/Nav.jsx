@@ -13,22 +13,22 @@ const navs = [
     },
     {
       name: "about",
-      link: "about",
+      link: "/#/about",
       color: "var(--green)",
     },
     {
       name: "projects",
-      link: "projects",
+      link: "/#/projects",
       color: "var(--purple)",
     },
     {
       name: "skills",
-      link: "skills",
+      link: "/#/skills",
       color: "var(--red)",
     },
     {
       name: "contact",
-      link: "contact",
+      link: "/#/contact",
       color: "var(--blue)",
     },
   ]
