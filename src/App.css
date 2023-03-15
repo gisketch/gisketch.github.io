@@ -1,42 +1,39 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.Nav {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 12rem;
+  background-color: #ddd;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.Nav div {
+  display: flex;
+  flex-direction: row;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Nav h2 {
+  margin-left: 1rem;
+  font-family: 'Medium', sans-serif;
+  font-size: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.Nav div a {
+  margin: 0 2rem;
+  text-decoration: none;
+  color: #101010;
+  font-family: 'Medium', sans-serif;
+  font-size: 1rem;
 }
 
-.card {
-  padding: 2em;
+.BorderNav {
+  position: absolute;
+  bottom: 0;
+  background-color: #101010;
+  height: 0.15rem;
+  width: 97.5%;
+  margin-left: 1.25%;
+  margin-right: 1.25%;
 }
 
-.read-the-docs {
-  color: #888;
-}
