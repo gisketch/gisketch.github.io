@@ -2,20 +2,18 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   overflow: hidden;
   height: calc(100vh - 12rem);
   cursor: pointer;
 }
 
-.About-1 {
-  margin-top: 8rem;
-}
-
 .About p {
   text-align: center;
   margin-left: 2rem;
   margin-right: 2rem;
+  flex: 1
 }
 
 .ScrollDown {
@@ -31,10 +29,16 @@
   letter-spacing: -0.05rem;
   width: 50%;
   margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .Paragraph b {
-  font-family: 'Bold';
+}
+
+.TypeAnimation {
+  opacity: 0.7;
 }
 
 .About-1 b:nth-of-type(1) {
@@ -68,6 +72,6 @@
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .Paragraph{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }
