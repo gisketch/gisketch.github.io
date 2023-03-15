@@ -27,6 +27,11 @@
   color: var(--light);
   font-family: 'Medium', sans-serif;
   font-size: 1rem;
+  cursor: pointer;
+}
+
+.NavIcon {
+  display: none;
 }
 
 .BorderNav {
@@ -86,3 +91,46 @@
   margin-right: 2rem;
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .Nav div a {
+    display: none;
+  }
+
+  .Nav {
+    height: 8rem;
+  }
+
+  .Home {
+    height: calc(100vh - 8rem);
+  }
+
+  .Portrait {
+    height: 20rem;
+    width: 20rem;
+    position: absolute;
+  }
+
+  .Name h1{
+    font-size: 4.5rem;
+    line-height: 4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .Name div{
+    line-height: 1rem;
+    font-size: 1rem;
+  }
+
+  .NavIcon {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-right: 2rem;
+    color: var(--light);
+  }
+
+  .NavIcon:hover {
+    color: var(--cyan);
+  }
+}
