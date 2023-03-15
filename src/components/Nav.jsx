@@ -52,6 +52,7 @@ function Nav(props) {
             animate={
                 {
                     x: navOpen && isMobile ? 0 : "-100%",
+                    display: navOpen && isMobile ? "flex" : "none",
                 }
             }
             transition={
