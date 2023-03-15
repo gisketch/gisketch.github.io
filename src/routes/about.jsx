@@ -44,7 +44,7 @@ const Paragraph = ({ paragraphState, typing, setTyping }) => {
             {typing ? (
               <TypeAnimation
                 sequence={[
-                  `In senior high school, I tried developing games by watching tutorials on YouTube, and I fell in love with programming. Despite pursuing a degree in electronics engineering in college, I spent most of my time learning programming on my own through online resources. My hard work paid off when I won first place in a Game Development competition in the whole Mindanao Region and a National Programming Competition, both of which I won on my own without any guidance.`,
+                  `In senior high school, I tried developing games by watching tutorials on YouTube, and I fell in love with programming. Despite pursuing a degree in electronics engineering in college, I spent most of my time learning programming on my own through online resources.`,
                   750,
                   () => {
                     setTyping(false);
@@ -59,9 +59,7 @@ const Paragraph = ({ paragraphState, typing, setTyping }) => {
                 In senior high school, I tried developing games by watching tutorials on YouTube,
                 and I fell in love with <b>programming</b>. Despite pursuing a degree in electronics
                 engineering in college, I spent most of my time learning programming on my own through
-                online resources. My hard work paid off when I won first place in a <b>Game
-                Development competition</b> in the whole Mindanao Region and a <b>National Programming Competition</b>,
-                both of which I won on my own without any guidance.
+                online resources.
               </motion.span>
             )}
           </motion.p>
