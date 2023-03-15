@@ -8,32 +8,32 @@ const status = "Currently studying at University of Southern Mindanao as an EcE 
 const navs = [
     {
       name: "home",
-      link: "#",
+      link: "/",
       color: "var(--yellow)",
     },
     {
       name: "about",
-      link: "#",
+      link: "about",
       color: "var(--green)",
     },
     {
-      name: "skills",
-      link: "#",
-      color: "var(--red)",
-    },
-    {
       name: "projects",
-      link: "#",
+      link: "projects",
       color: "var(--purple)",
     },
     {
+      name: "skills",
+      link: "skills",
+      color: "var(--red)",
+    },
+    {
       name: "contact",
-      link: "#",
+      link: "contact",
       color: "var(--blue)",
     },
   ]
 
-function Nav() {
+function Nav(props) {
     const [navOpen, setNavOpen] = useState(false);
     
     return(
@@ -43,6 +43,7 @@ function Nav() {
             animate={
                 {
                     x: navOpen ? 0 : "-100%",
+                    display: navOpen ? "flex" : "none",
                 }
             }
             transition={
@@ -58,6 +59,7 @@ function Nav() {
             </motion.div>
             {navs.map((nav, index) => (
                 <motion.a
+                    href={nav.link}
                     key={index}
                     style={
                         {
@@ -122,17 +124,21 @@ function Nav() {
             duration: 0.75,
           }
         }>
-        <motion.h2>
+        <motion.h2
+          style={{color: props.color}}
+          >
             GISKETCH 2023
         </motion.h2>
         <div>
           {navs.map((nav, index) => (
             <motion.a
+              href={nav.link}
               key={index}
               whileHover={
                 {
                   color: nav.color,
                   scale: 1.1,
+                  textShadow: `0px 0px 2px #ffffffaa}`,
                 }
               }
               >

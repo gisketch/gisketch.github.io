@@ -1,0 +1,73 @@
+.About {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  height: calc(100vh - 12rem);
+  cursor: pointer;
+}
+
+.About-1 {
+  margin-top: 8rem;
+}
+
+.About p {
+  text-align: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.ScrollDown {
+  margin-top: 8rem;
+  font-family: 'Light';
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+}
+
+.Paragraph {
+  font-family: 'Medium';
+  font-size: 2.5rem;
+  letter-spacing: -0.05rem;
+  width: 50%;
+  margin-bottom: 4rem;
+}
+
+.Paragraph b {
+  font-family: 'Bold';
+}
+
+.About-1 b:nth-of-type(1) {
+  color: var(--blue);
+}
+
+.About-1 b:nth-of-type(2) {
+  color: var(--red);
+}
+
+.About-2 b:nth-of-type(1) {
+  color: var(--purple);
+}
+
+.About-3 b:nth-of-type(1) {
+  color: var(--yellow);
+}
+
+.About-3 b:nth-of-type(2) {
+  color: var(--green);
+}
+
+.About-4 b:nth-of-type(1) {
+  color: var(--red);
+}
+
+.About-4 b:nth-of-type(2) {
+  color: var(--purple);
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .Paragraph{
+    font-size: 1.5rem;
+  }
+}

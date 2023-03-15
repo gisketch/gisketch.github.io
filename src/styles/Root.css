@@ -23,8 +23,8 @@
 .Name h1{
   /* background-color: aqua; */
   font-family: 'Bold';
-  font-size: 7.5rem;
-  line-height: 7rem;
+  font-size: 8.5rem;
+  line-height: 8rem;
   margin-bottom: 1rem;
   color: var(--blue);
 }
@@ -32,8 +32,8 @@
 .Name div{
   /* background-color: red; */
   font-family: 'Medium';
-  line-height: 1.5rem;
-  font-size: 1.5rem;
+  line-height: 2rem;
+  font-size: 2rem;
   color: var(--comment);
 }
 
@@ -42,8 +42,8 @@
   right: 0;
   bottom: 0;
   z-index: 0;
-  height: 35rem;
-  width: 35rem;
+  height: 45rem;
+  width: 45rem;
   margin-right: 2rem;
 }
 
