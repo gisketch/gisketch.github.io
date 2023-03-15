@@ -7,6 +7,7 @@
   overflow: hidden;
   height: calc(100vh - 12rem);
   cursor: pointer;
+  width: 100%;
 }
 
 .About p {
@@ -16,11 +17,13 @@
   flex: 1
 }
 
-.ScrollDown {
-  margin-top: 8rem;
+.Comment {
+  position: absolute;
+  top: 1.5rem;
   font-family: 'Light';
   font-size: 1.5rem;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.15rem;
+  z-index: 105;
 }
 
 .Paragraph {
@@ -67,6 +70,31 @@
   color: var(--purple);
 }
 
+.Hyperlinks {
+  background-color: var(--dark);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  font-family: "Bold";
+  font-size: 5rem;
+  pointer-events: none;
+}
+
+.Hyperlinks a {
+  text-decoration: none;
+  color: var(--light);
+}
+
+.Hyperlinks b {
+  font-family: "Light";
+  font-size: 3rem;
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .Paragraph{
@@ -76,5 +104,10 @@
   .About p {
     margin-left: 1.25rem;
     margin-right: 1.25rem;
+  }
+
+  .Comment {
+    font-size: 1rem;
+    top: 3rem;
   }
 }

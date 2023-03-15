@@ -49,6 +49,12 @@ function Nav(props) {
     <div>
         <motion.div
             className="MobileNav"
+            initial={
+              {
+                x: "-100%",
+                display: "none",
+              }
+            }
             animate={
                 {
                     x: navOpen && isMobile ? 0 : "-100%",

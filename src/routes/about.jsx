@@ -8,6 +8,21 @@ import {
 } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 
+const Comment = (paragraphState) => {
+    switch (paragraphState) {
+      case 1:
+        return ( "//click anywhere to continue" );
+      case 2:
+        return ( "//two more times" );
+      case 3:
+        return ( "//three of four" );
+      case 4:
+        return ( "//last one" );
+      default:
+        return ( "//Click anywhere to continue" );
+    }
+}
+
 const Paragraph = ({ paragraphState, typing, setTyping }) => {
 
   const renderParagraph = () => {
@@ -135,15 +150,95 @@ function About() {
       <div>
         <Nav color="var(--green)"/>
         <div className="About" onClick={()=>{
-          if (paragraphState === 4 && typing === false) {
+          if (paragraphState === 5 && typing === false) {
             setParagraphState(1);
             setTyping(true);
-          } else if ( paragraphState < 4 && typing === false){
+          } else if ( paragraphState < 5 && typing === false){
             setParagraphState(paragraphState + 1);
             setTyping(true);
           }
         }}>
+            <p className="Comment">
+              {typing ? null : 
+              <TypeAnimation 
+                sequence={
+                  [Comment(paragraphState)]
+                }
+                speed={80}
+                />
+                }
+              {
+                paragraphState === 5 ?
+                <TypeAnimation 
+                sequence={
+                  ["//check these out"]
+                }
+                speed={80}
+                /> : null
+              }
+            </p>
             <Paragraph paragraphState={paragraphState} typing={typing} setTyping={setTyping}/>
+            <motion.div
+              className="Hyperlinks"
+              initial={{opacity: 0}}
+              animate={{
+                opacity: paragraphState === 5 ? 1 : 0,
+                }}
+              transition={{
+                duration: 0.75,
+              }}>
+                <motion.a
+                  animation={{
+                    y: paragraphState === 5 ? 0 : 250,
+                  }}
+                  transition={{
+                    duration: 0.5,
+                  }}
+                  whileHover={{
+                    letterSpacing: "0.25rem",
+                    color: "var(--purple)",
+                  }}
+                  style={{
+                    pointerEvents: paragraphState === 5 ? "all" : "none",
+                  }}
+                  href="/#/projects">
+                    projects
+                  </motion.a>
+                <motion.a
+                  animation={{
+                    y: paragraphState === 5 ? 0 : 250,
+                  }}
+                  transition={{
+                    duration: 0.5,
+                  }}
+                  whileHover={{
+                    letterSpacing: "0.25rem",
+                    color: "var(--red)",
+                  }}
+                  style={{
+                    pointerEvents: paragraphState === 5 ? "all" : "none",
+                  }}
+                  href="/#/skills">
+                    skills
+                  </motion.a>
+                <motion.a
+                  animation={{
+                    y: paragraphState === 5 ? 0 : 250,
+                  }}
+                  transition={{
+                    duration: 0.5,
+                  }}
+                  whileHover={{
+                    letterSpacing: "0.25rem",
+                    color: "var(--green)",
+                  }}
+                  style={{
+                    pointerEvents: paragraphState === 5 ? "all" : "none",
+                  }}
+                  onClick={()=>{setParagraphState(1);setTyping(true)}}>
+                    <b>read again</b>
+                  </motion.a>
+            </motion.div>
         </div>
       </div>
     )
