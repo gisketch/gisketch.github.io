@@ -96,7 +96,7 @@ function Nav(props) {
                     }
                 }>
                 <p>
-                    ghegi44@gmail.com
+                    dev@gisketch.com
                 </p>
                 <p style={{fontSize: '1.25rem'}}>
                     PHILIPPINES
