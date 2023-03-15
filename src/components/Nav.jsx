@@ -35,7 +35,7 @@ const navs = [
 
 function Nav(props) {
     const [navOpen, setNavOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(true);
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
       const handleResize = () => {
