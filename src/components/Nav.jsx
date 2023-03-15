@@ -64,11 +64,6 @@ function Nav() {
                             color: nav.color,
                         }
                     }
-                    whileHover={
-                        {
-                            scale: 1.1,
-                        }
-                    }
                     animate={
                         {
                             opacity: navOpen ? 1 : 0,

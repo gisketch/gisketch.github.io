@@ -45,6 +45,9 @@
 }
 
 
+.MobileNav {
+    display: none;
+}
 
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
@@ -70,6 +73,7 @@
 
       /* MOBILE NAVIGATION */
     .MobileNav {
+        display: block;
         position: fixed;
         top: 0;
         left: 0;
