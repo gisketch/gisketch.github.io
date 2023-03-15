@@ -18,7 +18,7 @@ const Paragraph = ({ paragraphState, typing, setTyping }) => {
             {typing ? (
               <TypeAnimation
                 sequence={[
-                  `My passion for computers started when I was just three years old, and I was allowed to use the computer at my parents' printing shop. As I grew older, I became interested in gaming and taught myself how to animate stick figures and hand-draw animations of DBZ anime fights.`,
+                  `My passion for computers started when I was just three years old, and I was allowed to use the computer at my parents' printing shop. As I grew older, I became interested in gaming and taught myself how to animate stick figures and hand-draw animations with a mouse.`,
                   750,
                   () => {
                     setTyping(false);
@@ -33,7 +33,7 @@ const Paragraph = ({ paragraphState, typing, setTyping }) => {
                 My passion for <b>computers</b> started when I was just three years old,
                 and I was allowed to use the computer at my parents' printing shop.
                 As I grew older, I became interested in gaming and taught myself how
-                to <b>animate</b> stick figures and hand-draw animations of DBZ anime fights.
+                to <b>animate</b> stick figures and hand-draw animations with a mouse.
               </motion.span>
             )}
           </motion.p>
@@ -44,7 +44,7 @@ const Paragraph = ({ paragraphState, typing, setTyping }) => {
             {typing ? (
               <TypeAnimation
                 sequence={[
-                  `In senior high school, I tried developing games by watching tutorials on YouTube, and I fell in love with programming. Despite pursuing a degree in electronics engineering in college, I spent most of my time learning programming on my own through online resources.`,
+                  `In high school, I tried developing games by watching tutorials on YouTube, and I fell in love with programming. Despite pursuing a degree in electronics engineering in college, I spent most of my time learning programming on my own through online resources.`,
                   750,
                   () => {
                     setTyping(false);
@@ -56,7 +56,7 @@ const Paragraph = ({ paragraphState, typing, setTyping }) => {
               />
             ) : (
               <motion.span animate={{ scale: typing ? 1.1 : 1 }}>
-                In senior high school, I tried developing games by watching tutorials on YouTube,
+                In high school, I tried developing games by watching tutorials on YouTube,
                 and I fell in love with <b>programming</b>. Despite pursuing a degree in electronics
                 engineering in college, I spent most of my time learning programming on my own through
                 online resources.
