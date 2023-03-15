@@ -110,4 +110,16 @@
     font-size: 1rem;
     top: 3rem;
   }
+
+  .Hyperlinks a:nth-of-type(1) {
+    color: var(--purple);
+  }
+
+  .Hyperlinks a:nth-of-type(2) {
+    color: var(--red);
+  }
+
+  .Hyperlinks a:nth-of-type(3) {
+    color: var(--green);
+  }
 }
