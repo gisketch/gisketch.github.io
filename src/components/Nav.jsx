@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from "framer-motion"
 import '../styles/Nav.css'
 import { AiOutlineClose, AiOutlineBars} from 'react-icons/ai'
@@ -35,6 +35,15 @@ const navs = [
 
 function Nav(props) {
     const [navOpen, setNavOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(true);
+
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth <= 768 ? true : false);
+      };
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
     
     return(
     <div>
@@ -42,8 +51,7 @@ function Nav(props) {
             className="MobileNav"
             animate={
                 {
-                    x: navOpen ? 0 : "-100%",
-                    display: navOpen ? "flex" : "none",
+                    x: navOpen && isMobile ? 0 : "-100%",
                 }
             }
             transition={

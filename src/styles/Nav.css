@@ -44,11 +44,6 @@
     display: none;
 }
 
-
-.MobileNav {
-    display: none;
-}
-
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .Nav div a {
