@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { motion } from "framer-motion"
-import '../App.css'
-import { FaBars } from 'react-icons/fa'
+import '../styles/Nav.css'
+import { AiOutlineClose, AiOutlineBars} from 'react-icons/ai'
+
+const status = "Currently studying at University of Southern Mindanao as an EcE student."
 
 const navs = [
     {
@@ -35,7 +37,80 @@ function Nav() {
     const [navOpen, setNavOpen] = useState(false);
     
     return(
-    <motion.div
+    <div>
+        <motion.div
+            className="MobileNav"
+            animate={
+                {
+                    x: navOpen ? 0 : "-100%",
+                }
+            }
+            transition={
+                {
+                    duration: 1,
+                }
+            }
+            >
+            <motion.div
+                className="MobileNavIcon"
+                >
+                    <AiOutlineClose onClick={()=>{setNavOpen(false)}}/>
+            </motion.div>
+            {navs.map((nav, index) => (
+                <motion.a
+                    key={index}
+                    style={
+                        {
+                            color: nav.color,
+                        }
+                    }
+                    whileHover={
+                        {
+                            scale: 1.1,
+                        }
+                    }
+                    animate={
+                        {
+                            opacity: navOpen ? 1 : 0,
+                            x: navOpen ? 0 : -300,
+                        }
+                    }
+                    transition={
+                        {
+                            duration: 0.75,
+                            delay: 0.75 + (index * 0.1),
+                        }
+                    }
+                    >
+                    {nav.name}
+                </motion.a>
+            ))}
+            <motion.div
+                className="Status"
+                animate={
+                    {
+                        opacity: navOpen ? 1 : 0,
+                    }
+                }
+                transition={
+                    {
+                        duration: 0.75,
+                        delay: 1.5,
+                    }
+                }>
+                <p>
+                    ghegi44@gmail.com
+                </p>
+                <p style={{fontSize: '1.25rem'}}>
+                    PHILIPPINES
+                </p>
+                <p>
+                    {status}
+                </p>
+            </motion.div>
+        </motion.div>
+
+        <motion.div
         className="Nav"
         initial={
           {
@@ -69,7 +144,7 @@ function Nav() {
               {nav.name}
             </motion.a>
           ))}
-          <FaBars className="NavIcon" />
+          <AiOutlineBars className="NavIcon" onClick={()=>{setNavOpen(true)}}/>
         </div>
         <motion.div
           className="BorderNav"
@@ -91,6 +166,7 @@ function Nav() {
           }>
         </motion.div>
       </motion.div>
+    </div>
     )
 }
 

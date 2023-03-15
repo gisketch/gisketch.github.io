@@ -3,7 +3,6 @@ import './App.css'
 import Nav from './components/Nav'
 import { motion } from "framer-motion"
 import { TypeAnimation } from 'react-type-animation'
-import { FaBars } from 'react-icons/fa'
 
 import portrait from './assets/images/me.png'
 
