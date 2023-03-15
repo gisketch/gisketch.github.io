@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   height: 12rem;
-  background-color: #ddd;
+  background-color: var(--dark);
   z-index: 100;
 }
 
@@ -15,6 +15,7 @@
 }
 
 .Nav h2 {
+  color: var(--yellow);
   margin-left: 1rem;
   font-family: 'Medium', sans-serif;
   font-size: 1.5rem;
@@ -23,7 +24,7 @@
 .Nav div a {
   margin: 0 2rem;
   text-decoration: none;
-  color: #101010;
+  color: var(--light);
   font-family: 'Medium', sans-serif;
   font-size: 1rem;
 }
@@ -31,7 +32,7 @@
 .BorderNav {
   position: absolute;
   bottom: 0;
-  background-color: #101010;
+  background-color: var(--light);
   height: 0.15rem;
   width: 97.5%;
   margin-left: 1.25%;
@@ -39,6 +40,7 @@
 }
 
 .Home {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -48,6 +50,7 @@
 }
 
 .Name {
+  z-index: 2;
   position: relative;
   height: 100%;
   display: flex;
@@ -63,6 +66,7 @@
   font-size: 7.5rem;
   line-height: 7rem;
   margin-bottom: 1rem;
+  color: var(--blue);
 }
 
 .Name div{
@@ -70,9 +74,12 @@
   font-family: 'Medium';
   line-height: 1.5rem;
   font-size: 1.5rem;
+  color: var(--comment);
 }
 
 .Portrait {
+  position: absolute;
+  right: 0;
   z-index: 0;
   height: 35rem;
   width: 35rem;

@@ -32,8 +32,19 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-
   
-  background-color: #ddd;
-  color: #101010;
+  --dark: #282C34;
+  --light: #abb2bf;
+  --comment: #abb2bfaa;
+  --red: #E06C75;
+  --green: #98C379;
+  --blue: #61AFEF;
+  --yellow: #E5C07B;
+  --orange: #D19A66;
+  --purple: #C678DD;
+  --cyan: #56B6C2;
+  
+  background-color: var(--dark);
+  color: var(--light);
+
 }

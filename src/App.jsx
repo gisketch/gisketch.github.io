@@ -5,6 +5,34 @@ import { TypeAnimation } from 'react-type-animation'
 
 import portrait from './assets/images/me.png'
 
+const navs = [
+  {
+    name: "home",
+    link: "#",
+    color: "var(--yellow)",
+  },
+  {
+    name: "about",
+    link: "#",
+    color: "var(--green)",
+  },
+  {
+    name: "skills",
+    link: "#",
+    color: "var(--red)",
+  },
+  {
+    name: "projects",
+    link: "#",
+    color: "var(--purple)",
+  },
+  {
+    name: "contact",
+    link: "#",
+    color: "var(--blue)",
+  },
+]
+
 
 function App() {
   return (
@@ -30,11 +58,19 @@ function App() {
             GISKETCH 2023
         </motion.h2>
         <div>
-          <a>home</a>
-          <a>about</a>
-          <a>skills</a>
-          <a>projects</a>
-          <a>contact</a>
+          {navs.map((nav, index) => (
+            <motion.a
+              key={index}
+              whileHover={
+                {
+                  color: nav.color,
+                  scale: 1.1,
+                }
+              }
+              >
+              {nav.name}
+            </motion.a>
+          ))}
         </div>
         <motion.div
           className="BorderNav"
@@ -99,11 +135,11 @@ function App() {
               }>
               <TypeAnimation
               sequence={[
-                'WEB DEVELOPER', 
+                '//WEB DEVELOPER', 
                 2000, 
-                'GAME DEVELOPER', 
+                '//GAME DEVELOPER', 
                 2000, 
-                'ARTIST',
+                '//ARTIST',
                 2000,
                 () => {}
               ]}
@@ -123,7 +159,7 @@ function App() {
             }
             animate={
               {
-                opacity: 1,
+                opacity: 0.8,
                 y: 0,
               }
             }
