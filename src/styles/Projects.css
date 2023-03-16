@@ -38,13 +38,14 @@
 }
 
 .Projects-Section {
+  padding-top: 5rem;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
 }
 
 .Projects-List {
-  padding-top: 5rem;
+  padding-bottom: 5rem;
   margin-left: calc(10vw);  /* change on mobile */
   margin-right: calc(10vw);  /* change on mobile */
   display: flex;
