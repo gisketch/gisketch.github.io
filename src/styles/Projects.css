@@ -1,0 +1,266 @@
+.Project-Line {
+  position: absolute;
+  left: 15vw; /* change on mobile */
+  width: 0.1rem;
+  background-color: var(--comment);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Line-Circle {
+  position: absolute;
+  top: 5rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: var(--dark);
+  border: 0.1rem solid var(--comment);
+}
+
+.Projects-Header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4.5rem;
+  margin-left: calc(15vw + 2.5rem);  /* change on mobile */
+}
+
+.Projects-Title {
+  font-size: 1.25rem;
+  font-family: "FiraCode", monospace;
+  color: var(--comment);
+}
+
+.Projects-Subtitle {
+  font-size: 2rem;
+  font-family: "Bold";
+  color: var(--light);
+}
+
+.Projects-Section {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.Projects-List {
+  margin-top: 7.5rem;
+  margin-left: calc(10vw);  /* change on mobile */
+  margin-right: calc(10vw);  /* change on mobile */
+  display: flex;
+  flex-direction: column;
+}
+
+.Projects-Right {
+  text-align: right;
+  right: 0;
+}
+
+.Projects-Left {
+  text-align: left;
+  left: 0;
+}
+
+.Projects-Section-Title {
+  width: 100%;
+  position: absolute;
+  font-size: 15rem;
+  font-family: "Bold";
+  color: var(--backgroundComment);
+  z-index: -999;
+}
+
+.Project-Card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: var(--dark);
+  margin-bottom: 5rem;
+  aspect-ratio: 16/9;
+  border-radius: 0.5rem;
+  height: 20rem;
+  z-index: 100;  
+  transform-style: preserve-3d;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+
+.Project-Image {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  transform-style: preserve-3d;
+  border-radius: 1rem;
+}
+
+.Image-Gradient {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+  z-index: 1;
+  border-radius: 1rem;
+}
+
+.Project-Texts {
+  position: absolute;
+  bottom: 0rem;
+  display: flex;
+  flex-direction: column;
+  transform-style: preserve-3d;
+  text-shadow: 0 0 2.5rem rgba(0,0,0,0.5);
+}
+
+.Project-Text-Right {
+  right: 0rem;
+  text-align: right;
+}
+
+.Project-Text-Left {
+  left: 0rem;
+  text-align: left;
+}
+
+.Project-Name {
+  position: relative;
+  font-family: "Bold";
+  color: var(--light);
+  transform: translateZ(4rem);
+  transform-origin: top;
+  transition: 0.3s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Name-Short {
+  font-size: 5rem;
+}
+
+.Name-Long {
+  font-size: 3rem;
+}
+
+.Project-Subtitle {
+  font-family: "Medium";
+  font-size: 1.5rem;
+  color: var(--comment);
+  transform: translateZ(3.5rem);
+  transition: 0.3s;
+}
+
+.Project-Image:hover .Project-Texts .Project-Name {
+  color: var(--blue);
+  transform: translateZ(5rem);
+}
+
+.Project-Image:hover .Project-Texts .Project-Subtitle {
+  transform: translateZ(4.5rem);
+  color: var(--light);
+}
+
+.Project-Wrapper {
+  display: flex;
+}
+
+.Card-Left {
+  flex-direction: row;
+  align-self: flex-start;
+}
+
+.Card-Right {
+  flex-direction: row-reverse;
+  align-self: flex-end;
+}
+
+.Project-Description {
+  position: absolute;
+  font-size: 1.25rem;
+  height: 20rem;
+  pointer-events: none;
+  transition: 0.5s;
+  width: 80%;
+  transform: translateZ(6rem);
+  opacity: 0;
+}
+
+.Project-Card:hover .Project-Description {
+  opacity: 1;
+}
+
+.Desc-Left {
+  left: calc(100% + 5rem);
+  text-align: justify;
+}
+
+.Desc-Right {
+  right: calc(100% + 5rem);
+  text-align: justify;
+}
+
+@media (max-width: 1280px) {
+  .Project-Description {
+    font-size: 1rem;
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+    
+  .Projects-List {
+    margin-top: 3rem;
+    margin-left: calc(5vw);  /* change on mobile */
+  }
+
+  .Project-Card {
+    margin-bottom: 0rem;
+    height: 11rem;
+  }
+
+  .Project-Description {
+    display: none;
+  }
+  
+  .Name-Short {
+    font-size: 2.5rem;
+  }
+
+  .Name-Long {
+    font-size: 1.5rem;
+  }
+
+  .Project-Subtitle {
+    font-size: 1rem;
+  }
+
+  .Project-Line {
+    left: 10vw;
+  }
+
+  .Projects-Header {
+    margin-left: calc(10vw + 1.5rem);  /* change on mobile */
+  }
+
+  .Projects-Title {
+    font-size: 1rem;
+  }
+  
+  .Projects-Subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .Projects-Section-Title {
+    font-size: 4rem;
+  }
+
+  .Project-Text-Left {
+    right: 0rem;
+    text-align: right;
+  }
+
+  .Card-Right {
+    align-self: flex-start;
+  }
+
+}

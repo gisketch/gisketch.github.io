@@ -4,7 +4,6 @@ import { motion } from "framer-motion"
 import { TypeAnimation } from 'react-type-animation'
 import { useState } from 'react'
 
-
 import Skill from '../components/Skill'
 
 // SKILLS DATABASE
@@ -144,6 +143,7 @@ function SkillsMap(skills) {
 }
 
 function Skills() {
+
   const [typing, setTyping] = useState(true);
   const [isReady, setIsReady] = useState(false);
   const [skillsState, setSkillsState] = useState(0);

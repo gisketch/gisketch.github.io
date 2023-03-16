@@ -5,6 +5,7 @@ import './index.css'
 import Root from "./routes/root";
 import About from "./routes/about";
 import Skills from "./routes/skills";
+import Projects from "./routes/projects";
 
 import {
   HashRouter,
@@ -19,6 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route exact path="/" element={<Root />} />
         <Route exact path="/about" element={<About />} />
         <Route exact path="/skills" element={<Skills />} />
+        <Route exact path="/projects" element={<Projects />} />
       </Routes>
     </HashRouter>
   </React.StrictMode>,
