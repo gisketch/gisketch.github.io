@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import '../styles/Root.css'
 import Nav from '../components/Nav'
 import { motion } from "framer-motion"
@@ -9,8 +8,6 @@ import { FaGithub, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa'
 import portrait from '../assets/images/me.png'
 
 function Root() {
-    const [socialsReady, setSocialsReady] = useState(false);
-
     return (
       <div className="App">
         <Nav color="var(--yellow)"/>
