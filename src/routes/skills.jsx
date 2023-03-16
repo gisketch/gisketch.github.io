@@ -14,16 +14,19 @@ import unityimg from '../assets/images/unity3d.png';
 import csharpimg from '../assets/images/csharp.png';
 import photoshopimg from '../assets/images/photoshop.png';
 import blenderimg from '../assets/images/blender3d.png';
+import mcmimg from '../assets/images/mcm.png';
+import datathonimg from '../assets/images/datathon.png';
 
 const skills = [
   { 
     command: 'webdev',
+    comment: 'click anywhere to continue',
     data: [
       {
         image: reactimg,
         name: 'ReactJS',
-        level: 5,
-        description: 'still learning',
+        level: 6,
+        description: 'getting the hang of it',
       },
       {
         image: jsimg,
@@ -41,6 +44,7 @@ const skills = [
   },
   { 
     command: 'gamedev',
+    comment: 'i love making games!',
     data: [
       {
         image: unityimg,
@@ -58,6 +62,7 @@ const skills = [
   },
   { 
     command: 'art',
+    comment: 'check out my instagram! @gisketch',
     data: [
       {
         image: photoshopimg,
@@ -70,6 +75,26 @@ const skills = [
         name: 'Blender 3D',
         level: 5,
         description: 'still learning'
+      },
+    ]
+  },
+  { 
+    command: 'achievements',
+    comment: 'go check my work at the projects page!',
+    data: [
+      {
+        image: mcmimg,
+        name: '2021 MCM YES Champion',
+        level: 10,
+        date: "November 2021",
+        description: '1st place winner in a one-month game development competition against 11 schools.',
+      },
+      {
+        image: datathonimg,
+        name: '2022 Datathon National Champion',
+        level: 10,
+        date: "November 2022",
+        description: 'winner of a national programming competition in the philippines.',
       },
     ]
   },
@@ -87,6 +112,7 @@ function SkillsMap(skills) {
             image={skill.image}
             name={skill.name}
             level={skill.level}
+            date={skill.date}
             description={skill.description}
             key={"skill-"+index}
           />
@@ -100,6 +126,7 @@ function Skills() {
   const [typing, setTyping] = useState(true);
   const [isReady, setIsReady] = useState(false);
   const [skillsState, setSkillsState] = useState(0);
+  const [isReadyForComment, setIsReadyForComment] = useState(false);
 
   return(
     <div>
@@ -117,6 +144,10 @@ function Skills() {
             () => {
               if(skillsState < skills.length-1) {
                 setSkillsState(skillsState+1)
+                setTyping(true)
+              } else
+              {
+                setSkillsState(0)
                 setTyping(true)
               }
             }
@@ -138,7 +169,7 @@ function Skills() {
                     <div className="Command">
                       {
                         typing ?
-                        <TypeAnimation sequence={[`skills ${skills[skillsState].command}`,750,()=>{setTyping(false)}]} /> :
+                        <TypeAnimation sequence={[`skills ${skills[skillsState].command}`,750,()=>{setTyping(false);setIsReadyForComment(true)}]} /> :
                         <>skills {skills[skillsState].command}</> 
                       }
                     </div> :
@@ -146,8 +177,23 @@ function Skills() {
                   }
                 </div>
 
-                <div className="Showcase">
+                <div className={`Showcase Grid-${skills[skillsState].data.length > 3 ? 3 : skills[skillsState].data.length}`} >
                   { typing ? null : SkillsMap(skills[skillsState].data) }
+                </div>
+
+                <div className="Line">
+                  {
+                    typing ?
+                    null : 
+                    <div className="Command">
+                      {
+                        isReadyForComment ?
+                        <TypeAnimation sequence={[`>> page ${skillsState + 1}/${skills.length} (${skills[skillsState].comment})`]} speed={80}/>
+                        : <></>
+                      }
+                    </div> 
+                  }
+                    
                 </div>
 
               </div>

@@ -1,7 +1,7 @@
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 
-function Skill({image, name, level, description}) {
+function Skill({image, name, level, description, date=null}) {
 
   function getAsciiLoadingBar(percentage) {
     const barLength = 20; // the length of the loading bar
@@ -18,14 +18,22 @@ function Skill({image, name, level, description}) {
       <div className="Skill-Name">
         <TypeAnimation sequence={["",500,name]} cursor={false} speed={80}/>
       </div>
-      <div className="Skill-Level">
-        <TypeAnimation sequence={["",1000,getAsciiLoadingBar(level)]} cursor={false} speed={80} wrapper="pre"/>
-      </div>
+      {
+        date !== null ? 
+        <div className="Skill-Date">
+          <TypeAnimation sequence={["",1000,date]} cursor={false} speed={80}/>
+        </div>
+        : 
+        <div className={`Skill-Level Level-${level > 5 ? 'Strong' : 'Weak'}`}>
+          <TypeAnimation sequence={["",1000,getAsciiLoadingBar(level)]} cursor={false} speed={80} wrapper="pre"/>
+        </div>
+      }
       <div className="Skill-Description">
         <TypeAnimation sequence={["",1500,description]} cursor={false} speed={80}/>
       </div>
     </div>
   )
 }
+
 
 export default Skill;
