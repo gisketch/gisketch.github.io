@@ -26,7 +26,6 @@
 }
 
 :root {/* Import Fira Code font from Google Fonts */
-@import url('https://fonts.googleapis.com/css?family=Fira+Code:400,700');
   font-family: 'Regular', sans-serif;
   line-height: 1.5;
   font-weight: 400;

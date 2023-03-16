@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { TypeAnimation } from 'react-type-animation'
 import { useState } from 'react'
 
+
 import Skill from '../components/Skill'
 
 // SKILLS DATABASE
@@ -16,6 +17,8 @@ import photoshopimg from '../assets/images/photoshop.png';
 import blenderimg from '../assets/images/blender3d.png';
 import mcmimg from '../assets/images/mcm.png';
 import datathonimg from '../assets/images/datathon.png';
+import arduinoimg from '../assets/images/arduino.png';
+import pythonimg from '../assets/images/python.png';
 
 const skills = [
   { 
@@ -57,6 +60,24 @@ const skills = [
         name: 'C#',
         level: 6,
         description: 'quite good'
+      },
+    ]
+  },
+  { 
+    command: 'dev',
+    comment: "wait, there's more?",
+    data: [
+      {
+        image: pythonimg,
+        name: 'Python',
+        level: 7,
+        description: 'quite good',
+      },
+      {
+        image: arduinoimg,
+        name: 'Arduino',
+        level: 9,
+        description: 'expert'
       },
     ]
   },

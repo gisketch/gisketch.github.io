@@ -1,6 +1,9 @@
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import { MutatingDots } from 'react-loader-spinner'
+
 function Skill({image, name, level, description, date=null}) {
 
   function getAsciiLoadingBar(percentage) {
@@ -14,7 +17,23 @@ function Skill({image, name, level, description, date=null}) {
 
   return(
     <div className="Skill">
-      <motion.img src={image} alt={name} className="Skill-Image"/>
+      <LazyLoadImage
+        src={image} 
+        alt={name} 
+        className="Skill-Image" 
+        placeholder={
+        <MutatingDots 
+          height="100"
+          width="100"
+          color="#abb2bf"
+          secondaryColor= '#abb2bfaa'
+          radius='12.5'
+          ariaLabel="mutating-dots-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+         />
+         }/>
       <div className="Skill-Name">
         <TypeAnimation sequence={["",500,name]} cursor={false} speed={80}/>
       </div>
