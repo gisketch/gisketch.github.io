@@ -94,7 +94,7 @@ function Projects() {
           {/* BG Line */}
           <motion.div
             initial={{height: 0}}
-            animate={{height: '100rem'}}
+            animate={{height: '120rem'}}
             transition={{delay: 1.25, duration: 0.5}}
             className="Project-Line"
             >

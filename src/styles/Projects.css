@@ -44,7 +44,7 @@
 }
 
 .Projects-List {
-  margin-top: 7.5rem;
+  padding-top: 5rem;
   margin-left: calc(10vw);  /* change on mobile */
   margin-right: calc(10vw);  /* change on mobile */
   display: flex;
@@ -75,7 +75,6 @@
   position: relative;
   flex-direction: column;
   background-color: var(--dark);
-  margin-bottom: 5rem;
   aspect-ratio: 16/9;
   border-radius: 0.5rem;
   height: 20rem;
@@ -209,12 +208,10 @@
 @media only screen and (max-width: 768px) {
     
   .Projects-List {
-    margin-top: 3rem;
     margin-left: calc(5vw);  /* change on mobile */
   }
 
   .Project-Card {
-    margin-bottom: 0rem;
     height: auto;
     width: 100%;
   }
