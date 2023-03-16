@@ -1,9 +1,29 @@
-function Skill({image, name, description}) {
+import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
+
+function Skill({image, name, level, description}) {
+
+  function getAsciiLoadingBar(percentage) {
+    const barLength = 20; // the length of the loading bar
+    const filledLength = Math.round(barLength * (percentage / 10)); // calculate the number of filled characters
+    const emptyLength = barLength - filledLength; // calculate the number of empty characters
+    const filledChars = "/".repeat(filledLength); // create a string of filled characters
+    const emptyChars = ".".repeat(emptyLength); // create a string of empty characters
+    return `[${filledChars}${emptyChars}]`; // combine the strings and return the loading bar
+  }
+
   return(
     <div className="Skill">
-      <img src={image} alt={name} className="Skill-Image"/>
-      <div className="Skill-Name">{name}</div>
-      <div className="Skill-Description">{description}</div>
+      <motion.img src={image} alt={name} className="Skill-Image"/>
+      <div className="Skill-Name">
+        <TypeAnimation sequence={["",500,name]} cursor={false} speed={80}/>
+      </div>
+      <div className="Skill-Level">
+        <TypeAnimation sequence={["",1000,getAsciiLoadingBar(level)]} cursor={false} speed={80} wrapper="pre"/>
+      </div>
+      <div className="Skill-Description">
+        <TypeAnimation sequence={["",1500,description]} cursor={false} speed={80}/>
+      </div>
     </div>
   )
 }
