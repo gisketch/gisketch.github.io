@@ -47,6 +47,18 @@
   margin-right: 2rem;
 }
 
+.Socials {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+}
+
+.Socials a{
+  color: var(--light);
+  font-size: 1.75rem;
+}
+
 /* MOBILE NAVIGATION */
 
 

@@ -4,10 +4,13 @@ import Nav from '../components/Nav'
 import { motion } from "framer-motion"
 import { TypeAnimation } from 'react-type-animation'
 
+import { FaGithub, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa'
+
 import portrait from '../assets/images/me.png'
 
 function Root() {
-  
+    const [socialsReady, setSocialsReady] = useState(false);
+
     return (
       <div className="App">
         <Nav color="var(--yellow)"/>
@@ -51,6 +54,11 @@ function Root() {
                     duration: 0.5,
                     delay: 1.75,
                   }
+                }
+                onAnimationEnd={
+                  ()=>{
+                    setSocialsReady(true)
+                  }
                 }>
                 <TypeAnimation
                 sequence={[
@@ -67,6 +75,61 @@ function Root() {
                 repeat={Infinity}
               />
               </motion.div>
+
+              <div className="Socials">
+                <motion.a
+                  initial={{scale:0}}
+                  animate={{
+                    scale:1, 
+                    transition:{duration: 0.5, delay: 2}
+                  }} 
+                  whileHover={{
+                    color: 'var(--yellow)',
+                    transition:{duration: 0.25, delay: 0},
+                  }}
+                  href="https://github.com/gisketch/">
+                  <FaGithub />
+                </motion.a>
+                <motion.a
+                  initial={{scale:0}}
+                  animate={{
+                    scale:1, 
+                    transition:{duration: 0.5, delay: 2.25}
+                  }} 
+                  whileHover={{
+                    color: 'var(--cyan)',
+                    transition:{duration: 0.25, delay: 0},
+                  }}
+                  href="https://twitter.com/gisketch">
+                  <FaTwitter />
+                </motion.a>
+                <motion.a
+                  initial={{scale:0}}
+                  animate={{
+                    scale:1, 
+                    transition:{duration: 0.5, delay: 2.5}
+                  }} 
+                  whileHover={{
+                    color: 'var(--purple)',
+                    transition:{duration: 0.25, delay: 0},
+                  }}
+                  href="https://www.instagram.com/gisketch/">
+                  <FaInstagram />
+                </motion.a>
+                <motion.a
+                  initial={{scale:0}}
+                  animate={{
+                    scale:1, 
+                    transition:{duration: 0.5, delay: 2.75}
+                  }} 
+                  whileHover={{
+                    color: 'var(--red)',
+                    transition:{duration: 0.25, delay: 0},
+                  }}
+                  href="https://www.youtube.com/@gisketch">
+                  <FaYoutube />
+                </motion.a>
+              </div>
               
             </div>
             <motion.img 
