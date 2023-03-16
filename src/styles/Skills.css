@@ -172,6 +172,10 @@
 
 @media only screen and (max-width: 768px) {
 
+  .Line, .Prompt{
+    font-size: 0.75rem;
+  }
+
   .Showcase {
     display: grid;
     grid-template-columns: repeat(1, 1fr);

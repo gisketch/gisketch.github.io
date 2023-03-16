@@ -20,20 +20,8 @@ function Skill({image, name, level, description, date=null}) {
       <LazyLoadImage
         src={image} 
         alt={name} 
-        className="Skill-Image" 
-        placeholder={
-        <MutatingDots 
-          height="100"
-          width="100"
-          color="#abb2bf"
-          secondaryColor= '#abb2bfaa'
-          radius='12.5'
-          ariaLabel="mutating-dots-loading"
-          wrapperStyle={{}}
-          wrapperClass=""
-          visible={true}
-         />
-         }/>
+        className="Skill-Image"
+        />
       <div className="Skill-Name">
         <TypeAnimation sequence={["",500,name]} cursor={false} speed={80}/>
       </div>
