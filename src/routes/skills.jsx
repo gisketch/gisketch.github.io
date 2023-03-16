@@ -163,6 +163,9 @@ function Skills() {
           }}
           onClick={
             () => {
+              if(typing){
+                return
+              }
               if(skillsState < skills.length-1) {
                 setSkillsState(skillsState+1)
                 setTyping(true)
@@ -209,7 +212,7 @@ function Skills() {
                     <div className="Command">
                       {
                         isReadyForComment ?
-                        <TypeAnimation sequence={[`>> page ${skillsState + 1}/${skills.length} (${skills[skillsState].comment})`]} speed={80}/>
+                        <TypeAnimation sequence={["",1000,`>> page ${skillsState + 1}/${skills.length} (${skills[skillsState].comment})`]} speed={80}/>
                         : <></>
                       }
                     </div> 

@@ -95,6 +95,18 @@
   font-size: 3rem;
 }
 
+@media (max-width: 1024px) {
+  /* For mobile phones: */
+  .Paragraph{
+    font-size: 1.25rem;
+  }
+  
+  .Comment {
+    font-size: 1rem;
+    top: 3rem;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .Paragraph{
