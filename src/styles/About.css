@@ -112,11 +112,11 @@
   }
 
   .Hyperlinks a:nth-of-type(1) {
-    color: var(--purple);
+    color: var(--red);
   }
 
   .Hyperlinks a:nth-of-type(2) {
-    color: var(--red);
+    color: var(--purple);
   }
 
   .Hyperlinks a:nth-of-type(3) {

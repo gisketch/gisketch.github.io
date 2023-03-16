@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import '../styles/Nav.css'
 import { AiOutlineClose, AiOutlineBars} from 'react-icons/ai'
 
@@ -17,14 +17,14 @@ const navs = [
       color: "var(--green)",
     },
     {
-      name: "projects",
-      link: "/#/projects",
-      color: "var(--purple)",
-    },
-    {
       name: "skills",
       link: "/#/skills",
       color: "var(--red)",
+    },
+    {
+      name: "projects",
+      link: "/#/projects",
+      color: "var(--purple)",
     },
     {
       name: "contact",
@@ -35,7 +35,7 @@ const navs = [
 
 function Nav(props) {
     const [navOpen, setNavOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(true);
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
       const handleResize = () => {
@@ -47,24 +47,28 @@ function Nav(props) {
     
     return(
     <div>
+      <AnimatePresence>
         <motion.div
             className="MobileNav"
             initial={
               {
                 x: "-100%",
-                display: "none",
               }
             }
             animate={
                 {
-                    x: navOpen && isMobile ? 0 : "-100%",
-                    display: navOpen && isMobile ? "flex" : "none",
+                    x: navOpen ? 0 : "-100%",
                 }
             }
             transition={
                 {
                     duration: 1,
                 }
+            }
+            exit={
+              {
+                x: "-100%",
+              }
             }
             >
             <motion.div
@@ -182,6 +186,7 @@ function Nav(props) {
           }>
         </motion.div>
       </motion.div>
+      </AnimatePresence>
     </div>
     )
 }

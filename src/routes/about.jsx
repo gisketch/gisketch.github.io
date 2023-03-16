@@ -196,13 +196,13 @@ function About() {
                   }}
                   whileHover={{
                     letterSpacing: "0.25rem",
-                    color: "var(--purple)",
+                    color: "var(--red)",
                   }}
                   style={{
                     pointerEvents: paragraphState === 5 ? "all" : "none",
                   }}
-                  href="/#/projects">
-                    projects
+                  href="/#/skills">
+                    skills
                   </motion.a>
                 <motion.a
                   animation={{
@@ -213,14 +213,15 @@ function About() {
                   }}
                   whileHover={{
                     letterSpacing: "0.25rem",
-                    color: "var(--red)",
+                    color: "var(--purple)",
                   }}
                   style={{
                     pointerEvents: paragraphState === 5 ? "all" : "none",
                   }}
-                  href="/#/skills">
-                    skills
+                  href="/#/projects">
+                    projects
                   </motion.a>
+                
                 <motion.a
                   animation={{
                     y: paragraphState === 5 ? 0 : 250,
