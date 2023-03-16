@@ -215,7 +215,8 @@
 
   .Project-Card {
     margin-bottom: 0rem;
-    height: 11rem;
+    height: auto;
+    width: 100%;
   }
 
   .Project-Description {
