@@ -106,8 +106,7 @@ function Projects() {
       <Nav color="var(--purple)"/>
       <div className="Projects">
 
-        {/* Background Design */}
-          {/* BG Line */}
+
           <motion.div
             initial={{height: 0}}
             animate={{height: 'auto'}}
@@ -208,6 +207,15 @@ function Projects() {
               })
             }
         </motion.div>
+        <div className="Projects-Footer">
+          <motion.a
+            href="#/contact"
+            className="Projects-Contact"
+            animate={{color: 'var(--light)'}}
+            whileHover={{color: 'var(--blue)', letterSpacing: '0.2rem', scale: 1.1}}>
+            get in touch
+          </motion.a>
+        </div>
       </div>
     </div>
   );

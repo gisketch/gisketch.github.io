@@ -2,6 +2,7 @@
   position: absolute;
   bottom: 0;
   top: 0;
+  z-index:-50;
   left: 15vw; /* change on mobile */
   width: 0.1rem;
   background-color: var(--comment);
@@ -157,7 +158,7 @@
 }
 
 .Project-Image:hover .Project-Texts .Project-Name {
-  color: var(--blue);
+  color: var(--purple);
   transform: translateZ(5rem);
 }
 
@@ -185,24 +186,49 @@
   font-size: 1.25rem;
   height: 20rem;
   pointer-events: none;
-  transition: 0.5s;
+  transition: 0.75s;
   width: 80%;
-  transform: translateZ(6rem);
   opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+
 .Project-Card:hover .Project-Description {
+  transform: translateZ(6rem) translateX(0);
   opacity: 1;
 }
 
 .Desc-Left {
+  transform: translateZ(6rem) translateX(-50rem);
   left: calc(100% + 5rem);
   text-align: justify;
 }
 
 .Desc-Right {
+  transform: translateZ(6rem) translateX(50rem);
   right: calc(100% + 5rem);
   text-align: justify;
+}
+
+.Projects-Footer {
+  border-top: 1px solid var(--comment);
+  background-color: var(--dark);
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.Projects-Contact {
+  font-size: 3rem;
+  font-family: "Bold";
+  text-decoration: none;
 }
 
 @media (max-width: 1280px) {
@@ -267,5 +293,14 @@
   .Card-Right {
     align-self: flex-start;
   }
+
+  
+.Projects-Footer {
+  height: 10rem;
+}
+
+.Projects-Contact {
+  font-size: 2rem;
+}
 
 }
