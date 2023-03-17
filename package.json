@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "framer-motion": "^10.3.1",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",

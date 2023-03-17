@@ -4,16 +4,16 @@
 }
 
 .Project-Line {
-  position: absolute;
+  position: relative;
   bottom: 0;
   top: 0;
-  z-index:-50;
   left: 15vw; /* change on mobile */
   width: 0.1rem;
   background-color: var(--comment);
   display:flex;
   flex-direction: column;
   align-items: center;
+  z-index: -999;
 }
 
 .Line-Circle {
@@ -215,6 +215,7 @@
 }
 
 .Projects-Footer {
+  position: relative;
   border-top: 1px solid var(--comment);
   background-color: var(--dark);
   height: 15rem;
@@ -222,9 +223,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width:100%;
+  width: 100%;
   margin: 0;
   padding: 0;
+  z-index: 100;
 }
 
 .Projects-Contact {
@@ -237,6 +239,21 @@
   .Project-Description {
     font-size: 1rem;
     width: 50%;
+  }
+
+  .Desc-Left {
+    left: calc(100%);
+  }
+  
+  .Desc-Right {
+    right: calc(100%);
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .Project-Description {
+    display: none;
   }
 }
 
@@ -272,7 +289,7 @@
   }
 
   .Projects-Header {
-    margin-left: calc(10vw + 1.5rem);  /* change on mobile */
+    margin-left: calc(10vw + 4rem);  /* change on mobile */
   }
 
   .Projects-Title {
@@ -297,12 +314,12 @@
   }
 
   
-.Projects-Footer {
-  height: 10rem;
-}
+  .Projects-Footer {
+    height: 10rem;
+  }
 
-.Projects-Contact {
-  font-size: 2rem;
-}
+  .Projects-Contact {
+    font-size: 2rem;
+  }
 
 }

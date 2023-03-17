@@ -79,7 +79,7 @@ function Nav(props) {
             {navs.map((nav, index) => (
                 <motion.a
                     href={nav.link}
-                    key={index}
+                    key={"nav-"+index}
                     style={
                         {
                             color: nav.color,
@@ -152,7 +152,7 @@ function Nav(props) {
           {navs.map((nav, index) => (
             <motion.a
               href={nav.link}
-              key={index}
+              key={"navMob-" + index}
               whileHover={
                 {
                   color: nav.color,
