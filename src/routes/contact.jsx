@@ -69,10 +69,10 @@ function Contact() {
       setSendingEmailText("Please fill out all fields :<");
       return;
     }
-    sendEmail();
     setSendingEmail(true);
     setSendingEmailText("Sending E-mail...");
     console.log("SENDING...")
+    sendEmail();
   }
   
   const isValidEmail= (email) => {
@@ -165,7 +165,7 @@ function Contact() {
 
         <motion.div className="Contact-Header">
             <div className="Contact-Title">
-              <TypeAnimation sequence={["",1500,"Contact />", ()=>{setContactReady(true)}]} cursor={false} speed={80} />
+              <TypeAnimation sequence={["",1500,"dev@gisketch.com />", ()=>{setContactReady(true)}]} cursor={false} speed={80} />
             </div>
         </motion.div>
 
@@ -376,7 +376,7 @@ function Contact() {
               </span>
             </motion.div>
             <span className="EmailInfo">
-              {sendingEmail ? sendingEmailText : "asdaasd"}
+              {sendingEmail ? sendingEmailText : ""}
             </span>
           </span>
           
