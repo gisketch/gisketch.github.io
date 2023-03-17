@@ -1,4 +1,4 @@
-import Nav from '../components/nav.jsx';
+import Nav from '../components/Nav.jsx';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 
