@@ -1,5 +1,5 @@
 /* Import Fira Code font from Google Fonts */
-@import url('https://fonts.googleapis.com/css?family=Fira+Code:400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Fira+Code:200,300,400,500,600,700');
 
 @font-face {
   font-family: 'Light';
@@ -37,8 +37,10 @@
   -webkit-text-size-adjust: 100%;
   
   --dark: #282C34;
+  --darker: #17191d;
   --light: #abb2bf;
   --comment: #abb2bfaa;
+  --lightComment: #abb2bf10;
   --backgroundComment: #abb2bf11;
   --red: #E06C75;
   --green: #98C379;
@@ -52,6 +54,14 @@
   color: var(--light);
 
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
 
 *{
   user-select: none;

@@ -1,0 +1,112 @@
+
+.Contact {
+  position: relative;
+  margin: 0;
+}
+
+.Contact-Line {
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  top: 0;
+  left: 15vw; /* change on mobile */
+  width: 0.1rem;
+  background-color: var(--light);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Contact-Line-Circle {
+  position: absolute;
+  top: 5rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: var(--dark);
+  border: 0.1rem solid var(--comment);
+}
+
+.Contact-Header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4.5rem;
+  margin-left: calc(15vw + 2.5rem);  /* change on mobile */
+}
+
+.Contact-Title {
+  font-size: 1.25rem;
+  font-family: "FiraCode", monospace;
+  color: var(--comment);
+}
+
+.Contact-Content {
+  margin-top: 3rem;
+  box-sizing: border-box;
+  padding: 0;
+  width: 100%;
+}
+
+.Code-Line {
+  font-family: 'FiraCode', monospace;
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.Code-Line span {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.Code-Line:hover {
+  background-color: var(--lightComment);
+}
+
+
+.Line-Number {
+  width: calc(15vw - 1rem);
+  margin-right: 1rem;
+  font-weight: 300;
+  text-align: right;
+  color: var(--comment);
+  opacity: 0.5;
+}
+
+.Line-Text {
+  margin-left: 2rem;
+  flex: 1;
+}
+
+.Line-Methods {
+  color: var(--purple);
+}
+
+.Line-Prop {
+  color: var(--yellow);
+}
+
+.Line-Scope {
+  color: var(--red);
+}
+
+.Line-Prop2 {
+  color: var(--cyan);
+}
+
+.Line-String {
+  color: var(--green);
+}
+
+.Line-Comment {
+  color: var(--comment);
+}
+
+.Line-Input {
+  scale:0;
+}
+
+.Line-Dots {
+  opacity: 0;
+}

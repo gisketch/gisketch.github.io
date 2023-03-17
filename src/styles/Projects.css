@@ -1,3 +1,8 @@
+
+.Projects {
+  position: relative;
+}
+
 .Project-Line {
   position: absolute;
   bottom: 0;
@@ -47,9 +52,6 @@
   overflow-x: hidden;
 }
 
-.Projects {
-  position: relative;
-}
 
 .Projects-List {
   margin-left: calc(10vw);  /* change on mobile */

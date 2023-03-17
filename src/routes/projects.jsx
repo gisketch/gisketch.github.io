@@ -111,17 +111,18 @@ function Projects() {
             initial={{height: 0}}
             animate={{height: 'auto'}}
             transition={{delay: 1.25, duration: 0.5}}
-            className="Project-Line"
+            className="Contact-Line"
             >
               <motion.div
                 variants={circleVariants}
                 initial="initial"
                 animate="animate"
                 transition={{ delay: 1.5, duration: 0.5 }}
-                className="Line-Circle"
+                className="Contact-Line-Circle"
                 >
               </motion.div>
           </motion.div>
+
           <motion.div className="Projects-Header">
             <div className="Projects-Title">
               <TypeAnimation sequence={["",1500,"Projects />", ()=>{setProjectsReady(true)}]} cursor={false} speed={80} />
