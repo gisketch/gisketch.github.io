@@ -4,7 +4,11 @@ import { motion } from "framer-motion";
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { MutatingDots } from 'react-loader-spinner'
 
+import { RandomReveal } from 'react-random-reveal'
+
 function Skill({image, name, level, description, date=null}) {
+  const randomRevealCharacters = ["█","░",'`', '~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '=', '+', '[', '{', ']', '}', '\\', '|', ';', ':', "'", '"', ',', '<', '.', '>', '/', '?'];
+
 
   function getAsciiLoadingBar(percentage) {
     const barLength = 20; // the length of the loading bar
@@ -23,7 +27,11 @@ function Skill({image, name, level, description, date=null}) {
         className="Skill-Image"
         />
       <div className="Skill-Name">
-        <TypeAnimation sequence={["",500,name]} cursor={false} speed={80}/>
+        <RandomReveal
+          isPlaying duration={1.5}
+          characters={name}
+          revealEasing='easeInQuad'
+          characterSet={randomRevealCharacters}/>
       </div>
       {
         date !== null ? 

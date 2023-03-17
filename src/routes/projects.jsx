@@ -12,6 +12,8 @@ import aottgimg from '../assets/project_img/aottg.jpg';
 import zeldaimg from '../assets/project_img/zelda.png';
 import datathonimg from '../assets/project_img/datathon.jpg';
 import covidimg from '../assets/project_img/covid.png';
+import animationimg from '../assets/project_img/animation.jpg';
+import artimg from '../assets/project_img/instagram.png';
 
 const projects = [
   {
@@ -23,6 +25,20 @@ const projects = [
         subtitle: 'Junior Developer and Lead 2D Artist',
         link: "https://github.com/AoTTG-2/AoTTG-2",
         description: "AoTTG 2 is a community effort to continue the development of an indie game known as Attack on Titan Tribute Game (AoTTG) developed by FengLee. I started working on AoTTG 2 in 2020. I'm currently working as a lead 2D artist. I'm also a junior developer on the team."
+      },
+      {
+        img: artimg,
+        title: 'Art Gallery',
+        subtitle: 'I make digital artworks on my Instagram!',
+        link: "https://www.instagram.com/gisketch/",
+        description: "I love creating digital artworks featuring my favorite characters and franchises from anime to video games. Follow me @gisketch to explore my collection and discover new fanart pieces. I can't wait to share my passion with you!"
+      },
+      {
+        img: animationimg,
+        title: 'Animations',
+        subtitle: 'I make animations on my YouTube!',
+        link: "https://www.youtube.com/@gisketch/",
+        description: "As a fan of many anime and video game franchises, I've created fan animations and content on my YouTube channel in the past. Although my last one was from 2018, I still cherish those memories and would like to share my creations with fellow fans. On my channel, you'll find a variety of fan animations, speedpaints, and other content inspired by my favorite franchises."
       },
     ]
   },
@@ -69,7 +85,7 @@ function Projects() {
 
   useEffect(() => {
     VanillaTilt.init(document.querySelectorAll(".Project-Card"), {
-      max: 10,
+      max: 7,
       speed: 400
     });
   }, []);
