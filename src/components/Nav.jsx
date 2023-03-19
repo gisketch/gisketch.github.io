@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence} from "framer-motion"
 import '../styles/Nav.css'
-import { AiOutlineClose, AiOutlineBars} from 'react-icons/ai'
+import { AiOutlineClose, AiOutlineBars, } from 'react-icons/ai'
 
 const status = "Currently studying at University of Southern Mindanao as an EcE student."
 
@@ -36,6 +36,7 @@ const navs = [
 function Nav(props) {
     const [navOpen, setNavOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
+
 
     useEffect(() => {
       const handleResize = () => {
