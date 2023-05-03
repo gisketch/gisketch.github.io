@@ -2,21 +2,17 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 // import App from './App'
 import './index.css'
-import Root from "./routes/root";
-import About from "./routes/about";
-import Skills from "./routes/skills";
-import Projects from "./routes/projects";
-import Contact from "./routes/contact";
+import Root from './routes/root'
+import About from './routes/about'
+import Skills from './routes/skills'
+import Projects from './routes/projects'
+import Contact from './routes/contact'
 
-import {
-  HashRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<Root />} />
         <Route exact path="/about" element={<About />} />
@@ -24,6 +20,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route exact path="/projects" element={<Projects />} />
         <Route exact path="/contact" element={<Contact />} />
       </Routes>
-    </HashRouter>
-  </React.StrictMode>,
+    </BrowserRouter>
+  </React.StrictMode>
 )
