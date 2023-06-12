@@ -52,7 +52,7 @@ const projects = [
         img: zeldaimg,
         title: 'ZELDA',
         subtitle: 'Best Research Paper in Applied Science (USM) 🏆',
-        link: 'https://github.com/gisketch/ZELDA-math-parser',
+        link: 'https://github.com/gisketch/ZELDA-cs50-final-project',
         description:
           "Zelda is a natural language mathematical expression parser powered by OpenAI's GPT-3 language model. It is designed to work on a touch screen display used in Raspberry Pi. The application is built in JavaScript and ReactJS.",
       },
