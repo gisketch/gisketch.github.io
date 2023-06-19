@@ -17,7 +17,7 @@ import artimg from '../assets/project_img/instagram.png'
 
 const projects = [
   {
-    title: 'CURRENT',
+    title: 'PROJECTS',
     projects: [
       {
         img: aottgimg,
@@ -27,6 +27,27 @@ const projects = [
         description:
           "AoTTG 2 is a community effort to continue the development of an indie game known as Attack on Titan Tribute Game (AoTTG) developed by FengLee. I started working on AoTTG 2 in 2020. I'm currently working as a lead 2D artist. I'm also a junior developer on the team.",
       },
+      {
+        img: covidimg,
+        title: 'COVID Armageddon',
+        subtitle: '2021 MCM YES Competition Champion 🏆',
+        link: 'https://github.com/gisketch/covid-armageddon',
+        description:
+          'Developing this game was a grueling task that required sacrifices, hard work, and dedication. As the only one on the team with coding and art experience, I worked tirelessly to bring the game to life while juggling my studies. Despite the challenges, the game was well-received, and the experience taught me the value of perseverance and the rewards of hard work.',
+      },
+      {
+        img: zeldaimg,
+        title: 'ZELDA',
+        subtitle: 'Best Research Paper in Applied Science (USM) 🏆',
+        link: 'https://github.com/gisketch/ZELDA-cs50-final-project',
+        description:
+          "Zelda is a natural language mathematical expression parser powered by OpenAI's GPT-3 language model. It is designed to work on a touch screen display used in Raspberry Pi. The application is built in JavaScript and ReactJS.",
+      },
+    ],
+  },
+  {
+    title: 'ART',
+    projects: [
       {
         img: artimg,
         title: 'Art Gallery',
@@ -46,20 +67,7 @@ const projects = [
     ],
   },
   {
-    title: '2023',
-    projects: [
-      {
-        img: zeldaimg,
-        title: 'ZELDA',
-        subtitle: 'Best Research Paper in Applied Science (USM) 🏆',
-        link: 'https://github.com/gisketch/ZELDA-cs50-final-project',
-        description:
-          "Zelda is a natural language mathematical expression parser powered by OpenAI's GPT-3 language model. It is designed to work on a touch screen display used in Raspberry Pi. The application is built in JavaScript and ReactJS.",
-      },
-    ],
-  },
-  {
-    title: '2022',
+    title: 'ACHIEVEMENTS',
     projects: [
       {
         img: datathonimg,
@@ -68,19 +76,6 @@ const projects = [
         link: 'https://www.facebook.com/ghegijmnz/posts/pfbid021pjTeKwmRqAph5ur8GhJYDMYWhNBT373EPve6Ms4jJSxZGcKhx71ya5QnLdM22Jgl',
         description:
           "My leadership and my team's collective effort led us to win the national programming competition (Whole Philippines) with 118 out of 120 points. It was an unexpected victory, and I am grateful for my and my teammates' problem-solving skills and the unwavering support of our coach and the ICTC family. This victory was a significant achievement.",
-      },
-    ],
-  },
-  {
-    title: '2021',
-    projects: [
-      {
-        img: covidimg,
-        title: 'COVID Armageddon',
-        subtitle: '2021 MCM YES Competition Champion 🏆',
-        link: 'https://github.com/gisketch/covid-armageddon',
-        description:
-          'Developing this game was a grueling task that required sacrifices, hard work, and dedication. As the only one on the team with coding and art experience, I worked tirelessly to bring the game to life while juggling my studies. Despite the challenges, the game was well-received, and the experience taught me the value of perseverance and the rewards of hard work.',
       },
     ],
   },

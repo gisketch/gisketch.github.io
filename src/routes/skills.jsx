@@ -10,6 +10,7 @@ import Skill from '../components/Skill'
 import reactimg from '../assets/images/reactjs.png'
 import jsimg from '../assets/images/js.png'
 import nodeimg from '../assets/images/node.png'
+import tsimg from '../assets/images/ts.png'
 import unityimg from '../assets/images/unity3d.png'
 import csharpimg from '../assets/images/csharp.png'
 import photoshopimg from '../assets/images/photoshop.png'
@@ -27,20 +28,20 @@ const skills = [
       {
         image: reactimg,
         name: 'ReactJS',
-        level: 6,
-        description: 'getting the hang of it',
+        level: 10,
+        description: 'expert',
       },
       {
         image: jsimg,
         name: 'JavaScript',
-        level: 8,
-        description: 'quite good',
+        level: 9,
+        description: 'really good',
       },
       {
-        image: nodeimg,
-        name: 'NodeJS',
-        level: 4,
-        description: 'working on it',
+        image: tsimg,
+        name: 'TypeScript',
+        level: 8,
+        description: 'really good',
       },
     ],
   },
