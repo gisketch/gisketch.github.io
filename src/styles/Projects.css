@@ -1,4 +1,3 @@
-
 .Projects {
   position: relative;
 }
@@ -10,7 +9,7 @@
   left: 15vw; /* change on mobile */
   width: 0.1rem;
   background-color: var(--comment);
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   z-index: -999;
@@ -30,18 +29,18 @@
   display: flex;
   flex-direction: column;
   padding-top: 4.5rem;
-  margin-left: calc(15vw + 2.5rem);  /* change on mobile */
+  margin-left: calc(15vw + 2.5rem); /* change on mobile */
 }
 
 .Projects-Title {
   font-size: 1.25rem;
-  font-family: "FiraCode", monospace;
+  font-family: 'FiraCode', monospace;
   color: var(--comment);
 }
 
 .Projects-Subtitle {
   font-size: 2rem;
-  font-family: "Bold";
+  font-family: 'Bold';
   color: var(--light);
 }
 
@@ -52,10 +51,9 @@
   overflow-x: hidden;
 }
 
-
 .Projects-List {
-  margin-left: calc(10vw);  /* change on mobile */
-  margin-right: calc(10vw);  /* change on mobile */
+  margin-left: calc(10vw); /* change on mobile */
+  margin-right: calc(10vw); /* change on mobile */
   display: flex;
   flex-direction: column;
 }
@@ -74,7 +72,7 @@
   width: 100%;
   position: absolute;
   font-size: 15rem;
-  font-family: "Bold";
+  font-family: 'Bold';
   color: var(--backgroundComment);
   z-index: -999;
 }
@@ -88,12 +86,11 @@
   aspect-ratio: 16/9;
   border-radius: 0.5rem;
   height: 20rem;
-  z-index: 100;  
+  z-index: 100;
   transform-style: preserve-3d;
   cursor: pointer;
   pointer-events: all;
 }
-
 
 .Project-Image {
   height: 100%;
@@ -107,7 +104,11 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
   z-index: 1;
   border-radius: 1rem;
 }
@@ -118,7 +119,7 @@
   display: flex;
   flex-direction: column;
   transform-style: preserve-3d;
-  text-shadow: 0 0 2.5rem rgba(0,0,0,0.5);
+  text-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.5);
 }
 
 .Project-Text-Right {
@@ -133,7 +134,7 @@
 
 .Project-Name {
   position: relative;
-  font-family: "Bold";
+  font-family: 'Bold';
   color: var(--light);
   transform: translateZ(4rem);
   transform-origin: top;
@@ -152,7 +153,7 @@
 }
 
 .Project-Subtitle {
-  font-family: "Medium";
+  font-family: 'Medium';
   font-size: 1.5rem;
   color: var(--comment);
   transform: translateZ(3.5rem);
@@ -196,7 +197,6 @@
   justify-content: center;
 }
 
-
 .Project-Card:hover .Project-Description {
   transform: translateZ(6rem) translateX(0);
   opacity: 1;
@@ -204,13 +204,13 @@
 
 .Desc-Left {
   transform: translateZ(6rem) translateX(-50rem);
-  left: calc(100% + 5rem);
+  left: calc(100% + 1rem);
   text-align: justify;
 }
 
 .Desc-Right {
   transform: translateZ(6rem) translateX(50rem);
-  right: calc(100% + 5rem);
+  right: calc(100% + 1rem);
   text-align: justify;
 }
 
@@ -231,7 +231,7 @@
 
 .Projects-Contact {
   font-size: 3rem;
-  font-family: "Bold";
+  font-family: 'Bold';
   text-decoration: none;
 }
 
@@ -244,11 +244,10 @@
   .Desc-Left {
     left: calc(100%);
   }
-  
+
   .Desc-Right {
     right: calc(100%);
   }
-
 }
 
 @media (max-width: 1024px) {
@@ -258,9 +257,8 @@
 }
 
 @media only screen and (max-width: 768px) {
-    
   .Projects-List {
-    margin-left: calc(5vw);  /* change on mobile */
+    margin-left: calc(5vw); /* change on mobile */
   }
 
   .Project-Card {
@@ -271,7 +269,7 @@
   .Project-Description {
     display: none;
   }
-  
+
   .Name-Short {
     font-size: 2.5rem;
   }
@@ -289,17 +287,17 @@
   }
 
   .Projects-Header {
-    margin-left: calc(10vw + 4rem);  /* change on mobile */
+    margin-left: calc(10vw + 4rem); /* change on mobile */
   }
 
   .Projects-Title {
     font-size: 1rem;
   }
-  
+
   .Projects-Subtitle {
     font-size: 1.25rem;
   }
-  
+
   .Projects-Section-Title {
     font-size: 4rem;
   }
@@ -313,7 +311,6 @@
     align-self: flex-start;
   }
 
-  
   .Projects-Footer {
     height: 10rem;
   }
@@ -321,5 +318,4 @@
   .Projects-Contact {
     font-size: 2rem;
   }
-
 }

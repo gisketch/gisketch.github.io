@@ -9,6 +9,7 @@ import { RandomReveal } from 'react-random-reveal'
 import React, { useState, useRef, useEffect } from 'react'
 
 import aottgimg from '../assets/project_img/aottg.jpg'
+import gamehubimg from '../assets/project_img/gamehub.png'
 import zeldaimg from '../assets/project_img/zelda.png'
 import datathonimg from '../assets/project_img/datathon.jpg'
 import covidimg from '../assets/project_img/covid.png'
@@ -19,6 +20,14 @@ const projects = [
   {
     title: 'PROJECTS',
     projects: [
+      {
+        img: gamehubimg,
+        title: 'GameHub',
+        subtitle: 'A game library built with React and TypeScript',
+        link: 'https://gamehub.gisketch.com',
+        description:
+          'GameHub is an engaging game information platform. Developed with React JS, TypeScript, and Chakra UI, it offers detailed insights into various video games through the RAWG API. This project underlines my proficiency in API integration, UI development, and global state management with Zustand.',
+      },
       {
         img: aottgimg,
         title: 'AoTTG 2',
@@ -46,6 +55,19 @@ const projects = [
     ],
   },
   {
+    title: 'ACHIEVEMENTS',
+    projects: [
+      {
+        img: datathonimg,
+        title: 'Datathon Competition',
+        subtitle: '2022 National Jiecep National Champion 🏆',
+        link: 'https://www.facebook.com/ghegijmnz/posts/pfbid021pjTeKwmRqAph5ur8GhJYDMYWhNBT373EPve6Ms4jJSxZGcKhx71ya5QnLdM22Jgl',
+        description:
+          "My leadership and my team's collective effort led us to win the national programming competition (Whole Philippines) with 118 out of 120 points. It was an unexpected victory, and I am grateful for my and my teammates' problem-solving skills and the unwavering support of our coach and the ICTC family. This victory was a significant achievement.",
+      },
+    ],
+  },
+  {
     title: 'ART',
     projects: [
       {
@@ -63,19 +85,6 @@ const projects = [
         link: 'https://www.youtube.com/@gisketch/',
         description:
           "As a fan of many anime and video game franchises, I've created fan animations and content on my YouTube channel in the past. Although my last one was from 2018, I still cherish those memories and would like to share my creations with fellow fans. On my channel, you'll find a variety of fan animations, speedpaints, and other content inspired by my favorite franchises.",
-      },
-    ],
-  },
-  {
-    title: 'ACHIEVEMENTS',
-    projects: [
-      {
-        img: datathonimg,
-        title: 'Datathon Competition',
-        subtitle: '2022 National Jiecep National Champion 🏆',
-        link: 'https://www.facebook.com/ghegijmnz/posts/pfbid021pjTeKwmRqAph5ur8GhJYDMYWhNBT373EPve6Ms4jJSxZGcKhx71ya5QnLdM22Jgl',
-        description:
-          "My leadership and my team's collective effort led us to win the national programming competition (Whole Philippines) with 118 out of 120 points. It was an unexpected victory, and I am grateful for my and my teammates' problem-solving skills and the unwavering support of our coach and the ICTC family. This victory was a significant achievement.",
       },
     ],
   },
