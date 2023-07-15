@@ -3,8 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import '../styles/Nav.css'
 import { AiOutlineClose, AiOutlineBars } from 'react-icons/ai'
 
-const status =
-  'Currently studying at University of Southern Mindanao as an EcE student.'
+const status = 'Software Engineer'
 
 const navs = [
   {
