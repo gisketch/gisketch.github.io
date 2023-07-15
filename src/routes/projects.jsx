@@ -10,6 +10,7 @@ import React, { useState, useRef, useEffect } from 'react'
 
 import aottgimg from '../assets/project_img/aottg.jpg'
 import gamehubimg from '../assets/project_img/gamehub.png'
+import pokemonimg from '../assets/project_img/pokemon.png'
 import zeldaimg from '../assets/project_img/zelda.png'
 import datathonimg from '../assets/project_img/datathon.jpg'
 import covidimg from '../assets/project_img/covid.png'
@@ -20,6 +21,14 @@ const projects = [
   {
     title: 'PROJECTS',
     projects: [
+      {
+        img: pokemonimg,
+        title: "Who's that Pokémon",
+        subtitle: 'A game built with React, Redux, and Material UI',
+        link: 'https://pokemon.gisketch.com',
+        description:
+          'A mobile-friendly, engaging guessing game for Pokémon fans. Using ReactJS, Redux, and Material-UI, it challenges players to identify Pokémon from Generations 1 to 9 within a time limit, adding a strategic layer to gameplay. High scores are tracked on a leaderboard, making it a fun and competitive experience for all ages.',
+      },
       {
         img: gamehubimg,
         title: 'GameHub',
